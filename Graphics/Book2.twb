@@ -1,0 +1,935 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.17.1226.1925                               -->
+<workbook original-version='10.5' source-build='10.5.0 (10500.17.1226.1925)' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='7Positions' inline='true' name='federated.0atuyt31t6ducz1ajww7p1xcy38n' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='7Positions' name='textscan.0h5fgi01qybhvm1fgr1ki1o6fbkb'>
+            <connection class='textscan' directory='C:/Users/Keatn/Desktop/Keaton&apos;s Files/CSULB/Classes 18-19/CECS 456/Term Project' filename='7Positions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0h5fgi01qybhvm1fgr1ki1o6fbkb' name='7Positions.csv' table='[7Positions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='real' name='X1' ordinal='1' />
+            <column datatype='real' name='X2' ordinal='2' />
+            <column datatype='string' name='labels' ordinal='3' />
+            <column datatype='string' name='PLAYER' ordinal='4' />
+            <column datatype='integer' name='id' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X1]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>X1</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X2]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>X2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>labels</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[labels]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>labels</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PLAYER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PLAYER]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>PLAYER</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Player' datatype='string' name='[PLAYER]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Labels' datatype='string' name='[labels]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.481481' measure-ordering='alphabetic' measure-percentage='0.518519' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='5PositionsNew' inline='true' name='federated.0zpl8zw1bnxa7f14lfgid1ieekuw' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='5PositionsNew' name='textscan.1ikxrkb13dpgf216ohqq91lil8bm'>
+            <connection class='textscan' directory='C:/Users/Keatn/Desktop/Keaton&apos;s Files/CSULB/Classes 18-19/CECS 456/Term Project' filename='5PositionsNew.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[5PositionsNew.csv].[F1]' />
+              <expression op='[7Positions.csv].[F1]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1ikxrkb13dpgf216ohqq91lil8bm' name='5PositionsNew.csv' table='[5PositionsNew#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='real' name='X1' ordinal='1' />
+              <column datatype='real' name='X2' ordinal='2' />
+              <column datatype='string' name='labels' ordinal='3' />
+              <column datatype='string' name='PLAYER' ordinal='4' />
+              <column datatype='integer' name='id' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1ikxrkb13dpgf216ohqq91lil8bm' name='7Positions.csv' table='[7Positions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='real' name='X1' ordinal='1' />
+              <column datatype='real' name='X2' ordinal='2' />
+              <column datatype='string' name='labels' ordinal='3' />
+              <column datatype='string' name='PLAYER' ordinal='4' />
+              <column datatype='integer' name='id' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[F1 (7Positions.csv)]' value='[7Positions.csv].[F1]' />
+          <map key='[F1]' value='[5PositionsNew.csv].[F1]' />
+          <map key='[PLAYER (7Positions.csv)]' value='[7Positions.csv].[PLAYER]' />
+          <map key='[PLAYER]' value='[5PositionsNew.csv].[PLAYER]' />
+          <map key='[X1 (7Positions.csv)]' value='[7Positions.csv].[X1]' />
+          <map key='[X1]' value='[5PositionsNew.csv].[X1]' />
+          <map key='[X2 (7Positions.csv)]' value='[7Positions.csv].[X2]' />
+          <map key='[X2]' value='[5PositionsNew.csv].[X2]' />
+          <map key='[id (7Positions.csv)]' value='[7Positions.csv].[id]' />
+          <map key='[id]' value='[5PositionsNew.csv].[id]' />
+          <map key='[labels (7Positions.csv)]' value='[7Positions.csv].[labels]' />
+          <map key='[labels]' value='[5PositionsNew.csv].[labels]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X1]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>X1</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X2]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>X2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>labels</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[labels]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>labels</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PLAYER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PLAYER]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>PLAYER</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[5PositionsNew.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X1 (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>X1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X2 (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>X2</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>labels</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[labels (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>labels</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PLAYER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PLAYER (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>PLAYER</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (7Positions.csv)]</local-name>
+            <parent-name>[7Positions.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Count_Players' datatype='integer' name='[Calculation_164381390243213313]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([PLAYER])' />
+      </column>
+      <column caption='7Count_Players' datatype='integer' name='[Calculation_164381390246182914]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([PLAYER (7Positions.csv)])' />
+      </column>
+      <column datatype='string' name='[Labels (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[labels]' new-bin='true'>
+          <bin default-name='true' value='&quot;Ball-Handler Defender&quot;'>
+            <value>&quot;Ball-Handler Defender&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Perimeter Defender&quot;'>
+            <value>&quot;Perimeter Defender&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Rim Protector&quot;'>
+            <value>&quot;Rim Protector&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Versatile Big&quot;'>
+            <value>&quot;Versatile Big&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Versatile Wing&quot;'>
+            <value>&quot;Versatile Wing&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Player' datatype='string' name='[PLAYER]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[id (7Positions.csv)]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[labels (7Positions.csv) (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[labels (7Positions.csv)]' new-bin='true'>
+          <bin default-name='true' value='&quot;Ball Handler&quot;'>
+            <value>&quot;Ball Handler&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Longboi Perimeter D&quot;'>
+            <value>&quot;Longboi Perimeter D&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Mobile PF&quot;'>
+            <value>&quot;Mobile PF&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Perimeter D&quot;'>
+            <value>&quot;Perimeter D&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Rebounder?&quot;'>
+            <value>&quot;Rebounder?&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Rim Protector&quot;'>
+            <value>&quot;Rim Protector&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Versatile Defender&quot;'>
+            <value>&quot;Versatile Defender&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[labels (7Positions.csv)]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Ball Handler&quot;' value='Ball-Handler D' />
+          <alias key='&quot;Longboi Perimeter D&quot;' value='Wing Defender' />
+          <alias key='&quot;Mobile PF&quot;' value='Versatile Big' />
+          <alias key='&quot;Rebounder?&quot;' value='Rebounder' />
+        </aliases>
+      </column>
+      <column caption='Labels' datatype='string' name='[labels]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Ball-Handler Defender&quot;' value='Versatile Wing' />
+          <alias key='&quot;Versatile Wing&quot;' value='Ball-Handler Defender' />
+        </aliases>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.481481' measure-ordering='alphabetic' measure-percentage='0.518519' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[labels (7Positions.csv) (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Rim Protector&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mobile PF&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Ball Handler&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Perimeter D&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Rebounder?&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Longboi Perimeter D&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Versatile Defender&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Labels (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Rim Protector&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Versatile Big&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Versatile Wing&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Perimeter Defender&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ball-Handler Defender&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Player Distribution Across 7-Positions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5PositionsNew' name='federated.0zpl8zw1bnxa7f14lfgid1ieekuw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zpl8zw1bnxa7f14lfgid1ieekuw'>
+            <column caption='Count_Players' datatype='integer' name='[Calculation_164381390243213313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([PLAYER])' />
+            </column>
+            <column caption='7Count_Players' datatype='integer' name='[Calculation_164381390246182914]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([PLAYER (7Positions.csv)])' />
+            </column>
+            <column datatype='string' name='[PLAYER (7Positions.csv)]' role='dimension' type='nominal' />
+            <column caption='Player' datatype='string' name='[PLAYER]' role='dimension' type='nominal' />
+            <column datatype='string' name='[labels (7Positions.csv) (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[labels (7Positions.csv)]' new-bin='true'>
+                <bin default-name='true' value='&quot;Ball Handler&quot;'>
+                  <value>&quot;Ball Handler&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Longboi Perimeter D&quot;'>
+                  <value>&quot;Longboi Perimeter D&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Mobile PF&quot;'>
+                  <value>&quot;Mobile PF&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Perimeter D&quot;'>
+                  <value>&quot;Perimeter D&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Rebounder?&quot;'>
+                  <value>&quot;Rebounder?&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Rim Protector&quot;'>
+                  <value>&quot;Rim Protector&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Versatile Defender&quot;'>
+                  <value>&quot;Versatile Defender&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[labels (7Positions.csv)]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Ball Handler&quot;' value='Ball-Handler D' />
+                <alias key='&quot;Longboi Perimeter D&quot;' value='Wing Defender' />
+                <alias key='&quot;Mobile PF&quot;' value='Versatile Big' />
+                <alias key='&quot;Rebounder?&quot;' value='Rebounder' />
+              </aliases>
+            </column>
+            <column-instance column='[labels (7Positions.csv)]' derivation='None' name='[none:labels (7Positions.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_164381390243213313]' derivation='User' name='[usr:Calculation_164381390243213313:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_164381390246182914]' derivation='User' name='[usr:Calculation_164381390246182914:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels (7Positions.csv):nk]' value='111' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[usr:Calculation_164381390246182914:qk]' />
+              <color column='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[labels (7Positions.csv) (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[usr:Calculation_164381390243213313:qk]</rows>
+        <cols>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels (7Positions.csv):nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Player Distribution Across Positions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5PositionsNew' name='federated.0zpl8zw1bnxa7f14lfgid1ieekuw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zpl8zw1bnxa7f14lfgid1ieekuw'>
+            <column caption='Count_Players' datatype='integer' name='[Calculation_164381390243213313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([PLAYER])' />
+            </column>
+            <column datatype='string' name='[Labels (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[labels]' new-bin='true'>
+                <bin default-name='true' value='&quot;Ball-Handler Defender&quot;'>
+                  <value>&quot;Ball-Handler Defender&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Perimeter Defender&quot;'>
+                  <value>&quot;Perimeter Defender&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Rim Protector&quot;'>
+                  <value>&quot;Rim Protector&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Versatile Big&quot;'>
+                  <value>&quot;Versatile Big&quot;</value>
+                </bin>
+                <bin default-name='true' value='&quot;Versatile Wing&quot;'>
+                  <value>&quot;Versatile Wing&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Player' datatype='string' name='[PLAYER]' role='dimension' type='nominal' />
+            <column caption='Labels' datatype='string' name='[labels]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Ball-Handler Defender&quot;' value='Versatile Wing' />
+                <alias key='&quot;Versatile Wing&quot;' value='Ball-Handler Defender' />
+              </aliases>
+            </column>
+            <column-instance column='[PLAYER]' derivation='None' name='[none:PLAYER:nk]' pivot='key' type='nominal' />
+            <column-instance column='[labels]' derivation='None' name='[none:labels:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_164381390243213313]' derivation='User' name='[usr:Calculation_164381390243213313:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:PLAYER:nk]'>
+            <groupfilter function='level-members' level='[none:PLAYER:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:PLAYER:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels:nk]' value='139' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[Labels (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[usr:Calculation_164381390243213313:qk]</rows>
+        <cols>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='250'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='250'>
+            <card pane-specification-id='0' param='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[labels (7Positions.csv) (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels (7Positions.csv):nk]</field>
+            <field>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels:nk]</field>
+            <field>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[sum:X1:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='250'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='250'>
+            <card param='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:PLAYER:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[Labels (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0zpl8zw1bnxa7f14lfgid1ieekuw].[none:labels:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
